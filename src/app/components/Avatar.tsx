@@ -14,9 +14,8 @@ export function Avatar(props: AvatarProps) {
       src={src}
       alt={alt}
       className='rounded-full w-10 md:w-12'
-      width={40}
-      height={40}
-      priority
+      width={width}
+      height={height}
     />
   );
 }

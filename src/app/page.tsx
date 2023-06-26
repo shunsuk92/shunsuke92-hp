@@ -8,24 +8,32 @@ import { SiteCard, SiteCardProps } from '@/app/components/SiteCard';
 
 export default function Home() {
   const sites: SiteCardProps[] = [
-    { name: 'chatmemo', logoUrl: '/chatmemo.svg', url: 'https://chat-memo.com' },
+    { name: 'chatmemo', logoUrl: '/chatmemo.svg', url: 'https://chat-memo.com', width: 'w-48' },
+    {
+      name: 'biticon',
+      logoUrl: '/biticon.svg',
+      url: 'https://bit-icon.com',
+      width: 'w-36',
+    },
     {
       name: 'convertible',
       logoUrl: '/convertible.svg',
       url: 'https://convertible92.com',
+      width: 'w-48',
     },
+  ];
+
+  const librarys: SiteCardProps[] = [
     {
-      name: 'coming soon',
-      logoUrl: '/comingsoon.svg',
-    },
-    {
-      name: 'coming soon2',
-      logoUrl: '/comingsoon.svg',
+      name: 'bit-icon',
+      logoUrl: '/bit-icon.svg',
+      url: 'https://www.npmjs.com/package/bit-icon',
+      width: 'w-28',
     },
   ];
 
   const linkContact = () => {
-    window.location.href = 'mailto:shunsuke92.contact@gmail.com';
+    window.location.href = 'mailto:shunsuk92@gmail.com';
   };
   const linkGitHub = () => {
     window.open('https://github.com/shunsuke92', '_blank');
@@ -49,11 +57,22 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <main className='flex justify-center  max-w-full'>
-          <div className='flex items-center justify-start flex-wrap gap-8'>
-            {sites.map((site) => (
-              <SiteCard key={site.name} {...site} />
-            ))}
+        <main className='flex flex-col justify-center  max-w-full gap-16'>
+          <div className='flex flex-col gap-6'>
+            <div className='text-4xl text-slate-200 font-medium'>Web Site</div>
+            <div className='flex items-center justify-start flex-wrap gap-8'>
+              {sites.map((site) => (
+                <SiteCard key={site.name} {...site} />
+              ))}
+            </div>
+          </div>
+          <div className='flex flex-col gap-6'>
+            <div className='text-4xl text-slate-200 font-medium'>Library</div>
+            <div className='flex items-center justify-start flex-wrap gap-8'>
+              {librarys.map((library) => (
+                <SiteCard key={library.name} {...library} />
+              ))}
+            </div>
           </div>
         </main>
       </div>

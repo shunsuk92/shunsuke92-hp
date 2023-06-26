@@ -4,10 +4,11 @@ export interface SiteCardProps {
   name: string;
   logoUrl: string;
   url?: string;
+  width: string;
 }
 
 export function SiteCard(props: SiteCardProps) {
-  const { name, logoUrl, url } = props;
+  const { name, logoUrl, url, width } = props;
   return (
     <a
       href={url}
@@ -24,7 +25,7 @@ export function SiteCard(props: SiteCardProps) {
         alt={`${name} logo`}
         width={0}
         height={0}
-        className='absolute pointer-events-none w-9/12 h-auto'
+        className={`absolute pointer-events-none ${width} h-auto`}
         priority
       />
     </a>
