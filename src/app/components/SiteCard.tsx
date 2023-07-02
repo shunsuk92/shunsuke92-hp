@@ -50,7 +50,7 @@ export function SiteCard(props: SiteCardProps) {
       target='_blank'
       className={`${
         url ? '' : 'pointer-events-none'
-      } relative transition bg-slate-200 active:scale-95 flex items-center justify-center grow md:grow-0 w-56 h-40 md:h-56 rounded-lg`}
+      } relative transition bg-slate-200 active:scale-95 flex items-center justify-center grow md:grow-0  md:w-56 h-40 sm:h-48 md:h-56 rounded-lg`}
     >
       {url && (
         <span className='transition absolute w-full h-full hover:bg-slate-200/20 rounded-lg scale-105'></span>

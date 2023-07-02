@@ -9,10 +9,19 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      gridTemplateColumns: (theme) => {
+        const spacing = theme('spacing');
+
+        return Object.keys(spacing).reduce((accumulator, spacingKey) => {
+          return {
+            ...accumulator,
+            [`fill-${spacingKey}`]: `repeat(auto-fill, minmax(${spacing[spacingKey]}, 1fr))`,
+          };
+        }, {});
       },
     },
   },
   plugins: [],
-}
+};

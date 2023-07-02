@@ -75,7 +75,7 @@ export default function Home() {
         <main className='flex flex-col justify-center  max-w-full gap-16'>
           <div className='flex flex-col gap-6'>
             <div className='text-4xl text-slate-200 font-medium'>Web Site</div>
-            <div className='flex items-center justify-start flex-wrap gap-8'>
+            <div className='grid md:flex items-center justify-start flex-wrap gap-8 grid-cols-fill-56'>
               {sites.map((site) => (
                 <SiteCard key={site.name} {...site} />
               ))}
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
           <div className='flex flex-col gap-6'>
             <div className='text-4xl text-slate-200 font-medium'>Library</div>
-            <div className='flex items-center justify-start flex-wrap gap-8'>
+            <div className='grid md:flex items-center justify-start flex-wrap gap-8 grid-cols-fill-56'>
               {librarys.map((library) => (
                 <SiteCard key={library.name} {...library} />
               ))}
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
           <div className='flex flex-col gap-6'>
             <div className='text-4xl text-slate-200 font-medium'>Creative Coding</div>
-            <div className='flex items-center justify-start flex-wrap gap-8'>
+            <div className='grid md:flex items-center justify-start flex-wrap gap-8 grid-cols-fill-56'>
               {creativeCodings.map((creativeCoding) => (
                 <SiteCard key={creativeCoding.name} {...creativeCoding} />
               ))}
