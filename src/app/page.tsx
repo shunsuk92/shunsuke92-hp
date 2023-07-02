@@ -32,6 +32,21 @@ export default function Home() {
     },
   ];
 
+  const creativeCodings: SiteCardProps[] = [
+    {
+      name: 'pointillism',
+      logoUrl: '/pointillism.svg',
+      url: 'https://www.pointillism.shunsuke92.com/',
+      width: 'w-40',
+    },
+    {
+      name: 'collaborative-circles',
+      logoUrl: '/collaborative-circles.svg',
+      url: 'https://www.collaborative-circles.shunsuke92.com/',
+      width: 'w-44',
+    },
+  ];
+
   const linkContact = () => {
     window.location.href = 'mailto:shunsuk92@gmail.com';
   };
@@ -39,8 +54,8 @@ export default function Home() {
     window.open('https://github.com/shunsuke92', '_blank');
   };
   return (
-    <div className='flex flex-col justify-between space-y-20  w-full  md:w-[46rem] px-8 md:px-0 min-h-screen max-w-full pt-10 md:pt-20 pb-4'>
-      <div className='flex flex-col space-y-20 sm:space-y-40 '>
+    <div className='flex flex-col justify-between space-y-40  w-full  md:w-[46rem] px-8 md:px-0 min-h-screen max-w-full pt-10 md:pt-20 pb-4'>
+      <div className='flex flex-col space-y-20 sm:space-y-32 '>
         <header className='flex items-center justify-center '>
           <div className='flex items-center justify-between w-full'>
             <div className='flex items-center justify-center space-x-4'>
@@ -71,6 +86,14 @@ export default function Home() {
             <div className='flex items-center justify-start flex-wrap gap-8'>
               {librarys.map((library) => (
                 <SiteCard key={library.name} {...library} />
+              ))}
+            </div>
+          </div>
+          <div className='flex flex-col gap-6'>
+            <div className='text-4xl text-slate-200 font-medium'>Creative Coding</div>
+            <div className='flex items-center justify-start flex-wrap gap-8'>
+              {creativeCodings.map((creativeCoding) => (
+                <SiteCard key={creativeCoding.name} {...creativeCoding} />
               ))}
             </div>
           </div>
