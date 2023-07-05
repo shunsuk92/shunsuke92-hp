@@ -19,7 +19,7 @@ export default function Home() {
       name: 'convertible',
       logoUrl: '/convertible.svg',
       url: 'https://convertible92.com',
-      width: 'w-48',
+      width: 'w-44',
     },
   ];
 
