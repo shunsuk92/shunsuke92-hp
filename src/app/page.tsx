@@ -47,26 +47,27 @@ export default function Home() {
     },
   ];
 
-  const linkContact = () => {
+  const handleClickContact = () => {
     window.location.href = 'mailto:shunsuk92@gmail.com';
   };
-  const linkGitHub = () => {
+
+  const handleClickGitHub = () => {
     window.open('https://github.com/shunsuke92', '_blank');
   };
+
   return (
     <div className='flex flex-col justify-between space-y-40  w-full  md:w-[46rem] px-8 md:px-0 min-h-screen max-w-full pt-10 md:pt-20 pb-4'>
       <div className='flex flex-col space-y-20 sm:space-y-32 '>
         <header className='flex items-center justify-center '>
           <div className='flex items-center justify-between w-full'>
             <div className='flex items-center justify-center space-x-4'>
-              <Avatar src='/shunsuke92.png' alt='shunsuke92 icon' />
-              <div className='text-slate-200 font-medium text-xl md:text-2xl'>shunsuke</div>
+              <Avatar src='/shunsuke92_mg.png' alt='shunsuke92 icon' />
             </div>
             <div className='flex items-center justify-center space-x-3 md:space-x-6'>
-              <IconButton onClick={linkContact}>
+              <IconButton onClick={handleClickContact}>
                 <MailIcon />
               </IconButton>
-              <IconButton onClick={linkGitHub}>
+              <IconButton onClick={handleClickGitHub}>
                 <GitHubIcon />
               </IconButton>
             </div>
@@ -100,7 +101,7 @@ export default function Home() {
         </main>
       </div>
       <footer className=' flex items-center justify-center w-full space-y-20'>
-        <div className='text-slate-400 text-base '>2023 - shunsuke</div>
+        <div className='text-slate-400 text-base '>shunsuke92</div>
       </footer>
     </div>
   );

@@ -1,21 +1,14 @@
+import { ComponentPropsWithoutRef } from 'react';
+
 import Image from 'next/image';
 
-interface AvatarProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-}
+type AvatarProps = {
+  size?: 'small' | 'medium' | 'large';
+} & ComponentPropsWithoutRef<typeof Image>;
 
-export function Avatar(props: AvatarProps) {
-  const { src, alt, width = 40, height = 40 } = props;
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      className='rounded-full w-10 md:w-12'
-      width={width}
-      height={height}
-    />
-  );
+export function Avatar({ src, alt, size = 'medium' }: AvatarProps) {
+  const width =
+    size === 'small' ? 'w-10 md:w-12' : size === 'medium' ? 'w-12 md:w-14' : 'w-14 md:w-20';
+
+  return <Image src={src} alt={alt} className={`rounded-full ${width}`} width={100} height={100} />;
 }
