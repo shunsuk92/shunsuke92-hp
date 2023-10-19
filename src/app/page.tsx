@@ -10,16 +10,16 @@ export default function Home() {
   const sites: SiteCardProps[] = [
     { name: 'chatmemo', logoUrl: '/chatmemo.svg', url: 'https://chat-memo.com', width: 'w-48' },
     {
+      name: 'convertible',
+      logoUrl: '/convertible.svg',
+      url: 'https://convertible92.com',
+      width: 'w-40',
+    },
+    {
       name: 'biticon',
       logoUrl: '/biticon.svg',
       url: 'https://bit-icon.com',
       width: 'w-36',
-    },
-    {
-      name: 'convertible',
-      logoUrl: '/convertible.svg',
-      url: 'https://convertible92.com',
-      width: 'w-44',
     },
   ];
 
@@ -28,7 +28,7 @@ export default function Home() {
       name: 'bit-icon',
       logoUrl: '/bit-icon.svg',
       url: 'https://www.npmjs.com/package/bit-icon',
-      width: 'w-28',
+      width: 'w-24',
     },
   ];
 
