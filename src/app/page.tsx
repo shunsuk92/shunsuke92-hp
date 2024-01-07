@@ -36,13 +36,13 @@ export default function Home() {
     {
       name: 'pointillism',
       logoUrl: '/pointillism.svg',
-      url: 'https://www.pointillism.shunsuke92.com/',
+      url: 'https://www.pointillism.shunsuk.com/',
       width: 'w-40',
     },
     {
       name: 'collaborative-circles',
       logoUrl: '/collaborative-circles.svg',
-      url: 'https://www.collaborative-circles.shunsuke92.com/',
+      url: 'https://www.collaborative-circles.shunsuk.com/',
       width: 'w-44',
     },
   ];
@@ -52,7 +52,7 @@ export default function Home() {
   };
 
   const handleClickGitHub = () => {
-    window.open('https://github.com/shunsuke92', '_blank');
+    window.open('https://github.com/shunsuk92', '_blank');
   };
 
   return (
@@ -61,7 +61,7 @@ export default function Home() {
         <header className='flex items-center justify-center '>
           <div className='flex items-center justify-between w-full'>
             <div className='flex items-center justify-center space-x-4'>
-              <Avatar src='/shunsuke92_mg.png' alt='shunsuke92 icon' />
+              <Avatar src='/shunsuke92_mg.png' alt='icon' />
             </div>
             <div className='flex items-center justify-center space-x-3 md:space-x-6'>
               <IconButton onClick={handleClickContact}>
@@ -101,7 +101,7 @@ export default function Home() {
         </main>
       </div>
       <footer className=' flex items-center justify-center w-full space-y-20'>
-        <div className='text-slate-400 text-base '>shunsuke92</div>
+        <div className='text-slate-400 text-base '>shunsuke</div>
       </footer>
     </div>
   );

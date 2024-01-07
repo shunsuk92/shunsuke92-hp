@@ -1,1 +1,1 @@
-[shunsuke-hp](https://www.shunsuke92.com/) is my page.
+[shunsuke-hp](https://www.shunsuk.com/) is my page.
